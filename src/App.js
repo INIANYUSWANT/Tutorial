@@ -2,19 +2,13 @@
 import './App.css';
 import React from 'react';
 import Comp1 from './components/comp1' ;
+import Navbar from './components/Navbar' ;
 
 
 function App() {
   return (
     <div className="App">
-       
-      <header className="App-header">
-
-        <p>
-          Edit and save to reload.
-        </p>
-       
-      </header>
+   <Navbar/>
       <Comp1 />
     </div>
     
