@@ -1,5 +1,6 @@
 /* Style your components */
 .NavbarItems{
+    background-color: #fff;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -8,6 +9,12 @@
     width: 95%;
     height: 80px;
     border-radius: 13px;
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translate(-50%);
+    z-index: 9999;
+    
 }
 
 .navbar-logo{
@@ -38,10 +45,14 @@
 }
 
 .nav-links:hover{
-    background-color: #01959a;
+    background-color: #13abd1;
     color: #fff;
     border-radius:4px;
     transition: all 0.2s ease-in-out;
+}
+
+.nav-links-mobile{
+    display: none;
 }
 
 button{
@@ -58,4 +69,75 @@ button{
 button:hover{
     background-color: #222;
     color: #fff;
+}
+.menu-icons{
+    display: none;
+}
+
+@media screen and (max-width: 850px){
+
+    .NavbarItems{
+        z-index: 99;
+    }
+    .nav-menu{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        background: #fff;
+        width: 100%;
+        height: auto;
+        position: absolute;
+        top: 0;
+        left: -100%;
+        opacity: 1;
+        align-items: stretch;
+        padding: 80px 0 30px 0;
+        margin: 0;
+        transition: 0.3s ease-in-out;
+        border-radius: 13px;
+    }
+    .nav-menu.active{
+        left: 0;
+        opacity: 1;
+        z-index: -1;
+        transition: 0.3s ease-in-out;
+    }
+    
+    .nav-links{
+        display: block;
+        width: 100%;
+        font-size: 1.2rem;
+        padding: 2rem 0;
+    }
+    .nav-links:hover{
+        background: #13abd1;
+        transition: none;
+    }
+
+    .nav-links-mobile{
+        display: block;
+        text-align: center;
+        padding: 1.5rem;
+        margin: auto;
+        border-radius: 4px;
+        width: 80%;
+        background: #13abd1;
+        text-decoration: none;
+        color: #fff;
+        font-size: 1.2rem;
+        font-weight: 700;
+        letter-spacing: 2;
+    }
+    .menu-icons{
+        display: block;
+        cursor: pointer;
+    }
+    button{
+        display:none;
+    }
+    .menu-icons i{
+        font-size: 1.2rem;
+        color: #222;
+    }
+    
 }

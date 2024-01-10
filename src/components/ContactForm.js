@@ -3,7 +3,14 @@ import "./ContactFormStyles.css";
 function ContactForm() {
   return (
     <div className="from-container">
-      <h1>Your Code Here</h1>
+      <h1>Send a Message to Us</h1>
+      <form>
+        <input placeholder="Name"/>
+        <input placeholder="Email"/>
+        <input placeholder="Subject"/>
+        <textarea placeholder="Message" rows="4"></textarea>
+        <button>Send</button>
+      </form>
     </div>
   );
 }
